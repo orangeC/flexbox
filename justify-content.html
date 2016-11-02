@@ -6,9 +6,14 @@
 	<style>
 		*{margin: 0;padding: 0;}
 		.box{text-align: center;}
-		.box{flex-basis: 200px;}/*flexbox下flex-items的基础长度*/
+		.box{}/*flexbox下flex-items的基础长度*/
 		/*起始flex写在最前面，有优先级*/
-		.box1{background-color: #F44336;flex-shrink: 1}
+		.box1{background-color: #F44336;
+			flex-basis: 200px;
+			flex-grow: 2;
+			flex-shrink: 0;
+			flex: 2 0 200px;
+		}/*简化写法*/
 		.box2{background-color: #FF5722;flex-shrink: 2}
 		/*flex-shrink 默认值是 1 。当 container 的宽度装不下所有的 flex item 的时候，flex-shrink 就会发挥作用了。*/
 		/*可用于小屏幕下导航栏flex-shrink设为0*/
