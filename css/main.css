@@ -1,0 +1,43 @@
+body{
+	margin: 0;
+}
+.parent{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;/*可视区所有高度*/
+}
+.main{
+	flex-grow: 1;
+	background-color: #D1C4E9;
+	display: flex;
+}
+.header , .footer{
+	color: #fff;
+	background-color: #212121;
+	padding: 20px;
+}
+.col-1 , .col-2 , .col-3{
+	color: #fff;
+	padding: 20px;
+}
+.col-1{
+	background-color: #42A5F5;
+	flex-grow: 1;
+}
+.col-2{
+	background-color: #66BB6A;
+	order: -1;/*order排列顺序值，默认为0*/
+	width: 130px;
+}
+.col-3{
+	background-color: #FFB300;
+	width: 130px;
+}
+@media(max-width: 640px){
+	.main{
+		flex-direction: column;
+	}
+	.col-2 , .col-3{
+		width: auto;
+	}
+}
